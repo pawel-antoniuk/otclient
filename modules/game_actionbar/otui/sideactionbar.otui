@@ -32,6 +32,7 @@ SideActionButton < UIButton
       id: gray
       anchors.fill: parent
       image-source: /images/ui/ditherpattern
+      image-repeated: true
       visible: false
     Label
       id: text
@@ -46,6 +47,7 @@ SideActionButton < UIButton
         id: gray
         anchors.fill: parent
         image-source: /images/ui/ditherpattern
+        image-repeated: true
         visible: false
 
   Label
@@ -58,7 +60,7 @@ SideActionButton < UIButton
     text-auto-resize: true
     text-wrap: false
     phantom: true
-    font: verdana-8px-rounded
+    font: Verdana-8px
 
   Label
     id: parameterText

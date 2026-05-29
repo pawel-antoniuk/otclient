@@ -59,5 +59,6 @@ private:
     ticks_t m_startTime{ 0 };
     bool m_showTime{ true };
     bool m_showProgress{ true };
+    bool m_horizontalProgress{ false };
     bool m_running{ false };
 };

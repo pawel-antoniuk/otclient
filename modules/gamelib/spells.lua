@@ -1,14 +1,14 @@
 SpelllistSettings = {
     ['Default'] = {
         iconFile = '/images/game/spells/spell-icons-32x32',
-        iconsForGameCooldown = '/images/game/spells/spell-icons-20x20',
+        iconsForGameCooldown = '/images/game/spells/spell-icons-32x32',
         iconSize = {
             width = 32,
             height = 32
         },
         iconSizeCooldown = {
-            width = 20,
-            height = 22
+            width = 32,
+            height = 32
         },
         spellListWidth = 210,
         spellWindowWidth = 550,

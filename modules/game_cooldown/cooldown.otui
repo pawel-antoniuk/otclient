@@ -20,6 +20,8 @@ SpellProgressRect < UIProgressRect
   background: #585858AA
   percent: 100
   focusable: false
+  horizontal-progress: true
+  show-progress: false
 
 GroupCooldownParticles < UIParticles
   effect: groupcooldown-effect

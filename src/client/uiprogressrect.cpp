@@ -47,7 +47,14 @@ void UIProgressRect::drawSelf(const DrawPoolType drawPane)
     // todo: add smooth
     const auto& drawRect = getPaddingRect();
 
-    if (m_showProgress) {
+    if (m_horizontalProgress && m_percent < 100) {
+        const float remaining = (100.f - m_percent) / 100.f;
+        const int lineWidth = static_cast<int>(remaining * drawRect.width());
+        if (lineWidth > 0) {
+            const Rect lineRect(drawRect.left(), drawRect.bottom(), lineWidth, 1);
+            g_drawPool.addFilledRect(lineRect, Color::white);
+        }
+    } else if (m_showProgress) {
         // 0% - 12.5% (12.5)
         // triangle from top center, to top right (var x)
         if (m_percent < 12.5) {
@@ -185,6 +192,8 @@ void UIProgressRect::onStyleApply(const std::string_view styleName, const OTMLNo
             showTime(node->value<bool>());
         else if (node->tag() == "show-progress")
             showProgress(node->value<bool>());
+        else if (node->tag() == "horizontal-progress")
+            m_horizontalProgress = node->value<bool>();
     }
 }
 
@@ -235,9 +244,7 @@ void UIProgressRect::updateProgressText(const uint32_t remainingTimeMs)
 
     const float seconds = std::round(static_cast<float>(remainingTimeMs)) / 1000.f;
     if (seconds >= 10.f)
-        setText(fmt::format("{:.0f}s", seconds));
-    else if (seconds >= 1.f)
-        setText(fmt::format("{:.1f}s", seconds));
+        setText(fmt::format("{:.0f}", seconds));
     else
-        setText(fmt::format("{:.2f}s", seconds));
+        setText(fmt::format("{:.1f}", seconds));
 }
