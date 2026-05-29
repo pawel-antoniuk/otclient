@@ -287,22 +287,22 @@ UIWidget
     opacity: 100
     margin-right: 1
     relative-margin: bottom
-    margin-bottom: 200
+    margin-bottom: 208
     @canUpdateMargin: |
       function(self, newMargin)
         local dontStretch = modules.client_options.getOption('dontStretchShrink')
         local actionBars = modules.game_actionbar.getActiveBottomBars()
-        local maxHeight = 122 + (35 * actionBars)
+        local maxHeight = 126 + (39 * actionBars)
         local result = math.max(math.min(newMargin, self:getParent():getHeight() - 150), maxHeight)
         if dontStretch then
-          result = result > 650 and 650 or (result > 450 and 450 or 200)
+          result = result > 650 and 650 or (result > 450 and 450 or 208)
         end
         return result
       end
     @onGeometryChange: |
       function(self)
         local actionBars = modules.game_actionbar.getActiveBottomBars()
-        local maxHeight = 122 + (35 * actionBars)
+        local maxHeight = 126 + (39 * actionBars)
         local parentHeight = self:getParent():getHeight()
         self:setMarginBottom(math.min(math.max(parentHeight - 150, maxHeight), self:getMarginBottom()))
       end

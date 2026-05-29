@@ -338,8 +338,6 @@ void UIMap::updateMapSize()
 
     m_mapRect.resize(mapSize);
     m_mapRect.moveCenter(clippingRect.center());
-    if (mapSize.width() % 2 == 0)
-        m_mapRect.translate(-1, 0);
 
     m_mapviewRect = Rect(m_mapRect.topLeft() * g_window.getDisplayDensity(), m_mapRect.size() * g_window.getDisplayDensity());
 

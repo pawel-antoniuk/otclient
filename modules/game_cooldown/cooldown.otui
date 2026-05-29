@@ -1,28 +1,31 @@
 SpellGroupIcon < UIWidget
-  size: 20 22
+  size: 22 24
   image-size: 20 20
+  image-offset: 1 1
   image-source: /images/game/spells/spellgroup-icons-20x20
-  image-color: #A0A0A0
+  image-color: #707070
+  background-color: #3F3F3F
   focusable: false
   margin-top: 3
   border-width-top: 1
-  border-color-top: #C0C0C0
+  border-color-top: #9F9F9F
   border-width-left: 1
-  border-color-left: #C0C0C0
-  opacity: 0.5
+  border-color-left: #9F9F9F
   $on:
-    opacity: 1
+    image-color: #FFFFFF
 
 
 SpellIcon < UIWidget
-  size: 20 22
+  size: 22 24
   image-size: 20 20
-  image-color: #A0A0A0
+  image-offset: 1 1
+  image-color: #707070
+  background-color: #3F3F3F
   focusable: false
   border-width-top: 1
-  border-color-top: #C0C0C0
+  border-color-top: #9F9F9F
   border-width-left: 1
-  border-color-left: #C0C0C0
+  border-color-left: #9F9F9F
   $!first:
     margin-left: 5
 
@@ -39,7 +42,7 @@ GroupCooldownParticles < UIParticles
 Panel
   id: cooldownWindow
   !text: tr('')
-  size: 220 28
+  size: 220 30
   anchors.top: parent.top
   anchors.left: parent.left
   anchors.right: parent.right
@@ -60,6 +63,7 @@ Panel
       id: progressRectAttack
       anchors.left: groupIconAttack.left
       anchors.bottom: groupIconAttack.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Attack')
@@ -75,6 +79,7 @@ Panel
       id: progressRectHealing
       anchors.left: groupIconHealing.left
       anchors.bottom: groupIconHealing.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Healing')
@@ -90,6 +95,7 @@ Panel
       id: progressRectSupport
       anchors.left: groupIconSupport.left
       anchors.bottom: groupIconSupport.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Support')
@@ -105,6 +111,7 @@ Panel
       id: progressRectSpecial
       anchors.left: groupIconSpecial.left
       anchors.bottom: groupIconSpecial.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Special')
@@ -120,6 +127,7 @@ Panel
       id: progressRectCrippling
       anchors.left: groupIconCrippling.left
       anchors.bottom: groupIconCrippling.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Crippling')
@@ -135,6 +143,7 @@ Panel
       id: progressRectFocus
       anchors.left: groupIconFocus.left
       anchors.bottom: groupIconFocus.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Focus')
@@ -150,6 +159,7 @@ Panel
       id: progressRectUltimateStrikes
       anchors.left: groupIconUltimateStrikes.left
       anchors.bottom: groupIconUltimateStrikes.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Ultimate Strike')
@@ -165,6 +175,7 @@ Panel
       id: progressRectGreatBeams
       anchors.left: groupIconGreatBeams.left
       anchors.bottom: groupIconGreatBeams.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Great Beams')
@@ -180,6 +191,7 @@ Panel
       id: progressRectBurstsOfNature
       anchors.left: groupIconBurstsOfNature.left
       anchors.bottom: groupIconBurstsOfNature.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Bursts of Nature')
@@ -195,6 +207,7 @@ Panel
       id: progressRectVirtue
       anchors.left: groupIconVirtue.left
       anchors.bottom: groupIconVirtue.bottom
+      margin-left: 1
       width: 20
       height: 2
       !tooltip: tr('Virtue')
@@ -205,13 +218,13 @@ Panel
       anchors.left: prev.right
       margin-left: 5
       margin-top: 2
-      height: 22
+      height: 24
 
     Panel
-      height: 22
+      height: 24
       id: cooldownPanel
       margin-top: 4
-      margin-bottom: 5
+      margin-bottom: 3
       anchors.top: parent.top
       anchors.bottom: parent.bottom
       anchors.left: prev.right

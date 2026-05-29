@@ -84,6 +84,7 @@ function loadIcon(iconId)
             progressRect:addAnchor(AnchorLeft, 'parent', AnchorLeft)
             progressRect:addAnchor(AnchorRight, 'parent', AnchorRight)
             progressRect:addAnchor(AnchorBottom, 'parent', AnchorBottom)
+            progressRect:setMarginLeft(1)
             isNewProgressRect = true
         end
         progressRect.icon = icon
