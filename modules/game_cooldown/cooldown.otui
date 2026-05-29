@@ -1,23 +1,33 @@
 SpellGroupIcon < UIWidget
-  size: 22 22
-  image-size: 22 22
+  size: 20 22
+  image-size: 20 20
   image-source: /images/game/spells/spellgroup-icons-20x20
+  image-color: #A0A0A0
   focusable: false
   margin-top: 3
+  border-width-top: 1
+  border-color-top: #C0C0C0
+  border-width-left: 1
+  border-color-left: #C0C0C0
   opacity: 0.5
   $on:
     opacity: 1
 
 
 SpellIcon < UIWidget
-  size: 20 20
+  size: 20 22
   image-size: 20 20
+  image-color: #A0A0A0
   focusable: false
+  border-width-top: 1
+  border-color-top: #C0C0C0
+  border-width-left: 1
+  border-color-left: #C0C0C0
   $!first:
     margin-left: 5
 
 SpellProgressRect < UIProgressRect
-  background: #585858AA
+  background: #000000
   percent: 100
   focusable: false
   horizontal-progress: true
@@ -48,7 +58,10 @@ Panel
 
     SpellProgressRect
       id: progressRectAttack
-      anchors.fill: groupIconAttack
+      anchors.left: groupIconAttack.left
+      anchors.bottom: groupIconAttack.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Attack')
 
     SpellGroupIcon
@@ -60,7 +73,10 @@ Panel
 
     SpellProgressRect
       id: progressRectHealing
-      anchors.fill: groupIconHealing
+      anchors.left: groupIconHealing.left
+      anchors.bottom: groupIconHealing.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Healing')
 
     SpellGroupIcon
@@ -72,7 +88,10 @@ Panel
 
     SpellProgressRect
       id: progressRectSupport
-      anchors.fill: groupIconSupport
+      anchors.left: groupIconSupport.left
+      anchors.bottom: groupIconSupport.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Support')
 
     SpellGroupIcon
@@ -84,7 +103,10 @@ Panel
 
     SpellProgressRect
       id: progressRectSpecial
-      anchors.fill: groupIconSpecial
+      anchors.left: groupIconSpecial.left
+      anchors.bottom: groupIconSpecial.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Special')
 
     SpellGroupIcon
@@ -96,7 +118,10 @@ Panel
 
     SpellProgressRect
       id: progressRectCrippling
-      anchors.fill: groupIconCrippling
+      anchors.left: groupIconCrippling.left
+      anchors.bottom: groupIconCrippling.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Crippling')
 
     SpellGroupIcon
@@ -108,7 +133,10 @@ Panel
 
     SpellProgressRect
       id: progressRectFocus
-      anchors.fill: groupIconFocus
+      anchors.left: groupIconFocus.left
+      anchors.bottom: groupIconFocus.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Focus')
 
     SpellGroupIcon
@@ -120,7 +148,10 @@ Panel
 
     SpellProgressRect
       id: progressRectUltimateStrikes
-      anchors.fill: groupIconUltimateStrikes
+      anchors.left: groupIconUltimateStrikes.left
+      anchors.bottom: groupIconUltimateStrikes.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Ultimate Strike')
 
     SpellGroupIcon
@@ -132,7 +163,10 @@ Panel
 
     SpellProgressRect
       id: progressRectGreatBeams
-      anchors.fill: groupIconGreatBeams
+      anchors.left: groupIconGreatBeams.left
+      anchors.bottom: groupIconGreatBeams.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Great Beams')
 
     SpellGroupIcon
@@ -144,7 +178,10 @@ Panel
 
     SpellProgressRect
       id: progressRectBurstsOfNature
-      anchors.fill: groupIconBurstsOfNature
+      anchors.left: groupIconBurstsOfNature.left
+      anchors.bottom: groupIconBurstsOfNature.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Bursts of Nature')
 
     SpellGroupIcon
@@ -156,7 +193,10 @@ Panel
 
     SpellProgressRect
       id: progressRectVirtue
-      anchors.fill: groupIconVirtue
+      anchors.left: groupIconVirtue.left
+      anchors.bottom: groupIconVirtue.bottom
+      width: 20
+      height: 2
       !tooltip: tr('Virtue')
 
     VerticalSeparator

@@ -60,7 +60,7 @@ ActionButton < UIButton
     text-auto-resize: true
     text-wrap: false
     phantom: true
-    font: Verdana-8px
+    font: verdana-8px-rounded
 
   Label
     id: parameterText
@@ -200,7 +200,7 @@ Panel
   padding-bottom: 1
 
   $on:
-    height: 36
+    height: 40
     visible: true
 
   $!on:
@@ -222,7 +222,7 @@ Panel
     anchors.right: nextPanel.left
     //margin-left: 1
     margin-right: 4
-    margin-top: -2
+    margin-top: 0
     horizontal-scrollbar: actionScroll
     layout: horizontalBox
     @onGeometryChange: modules.game_actionbar.updateVisibleWidgets()

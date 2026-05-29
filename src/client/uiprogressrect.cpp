@@ -49,10 +49,10 @@ void UIProgressRect::drawSelf(const DrawPoolType drawPane)
 
     if (m_horizontalProgress && m_percent < 100) {
         const float remaining = (100.f - m_percent) / 100.f;
-        const int lineWidth = static_cast<int>(remaining * drawRect.width());
-        if (lineWidth > 0) {
-            const Rect lineRect(drawRect.left(), drawRect.bottom(), lineWidth, 1);
-            g_drawPool.addFilledRect(lineRect, Color::white);
+        const int fillWidth = static_cast<int>(remaining * drawRect.width());
+        if (fillWidth > 0) {
+            const Rect fillRect(drawRect.left(), drawRect.top(), fillWidth, drawRect.height());
+            g_drawPool.addFilledRect(fillRect, m_backgroundColor);
         }
     } else if (m_showProgress) {
         // 0% - 12.5% (12.5)

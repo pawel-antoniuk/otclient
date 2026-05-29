@@ -60,7 +60,7 @@ SideActionButton < UIButton
     text-auto-resize: true
     text-wrap: false
     phantom: true
-    font: Verdana-8px
+    font: verdana-8px-rounded
 
   Label
     id: parameterText

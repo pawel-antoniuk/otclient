@@ -444,7 +444,7 @@ Panel
     anchors.bottom: parent.bottom
     margin-bottom: 4
     margin-left: 5
-    size: 18 18
+    size: 16 16
     image-source: /images/ui/console_say
     image-clip: 0 0 18 18
     !tooltip: tr('Set talk type')

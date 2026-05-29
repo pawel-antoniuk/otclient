@@ -80,7 +80,10 @@ function loadIcon(iconId)
         if not progressRect then
             progressRect = g_ui.createWidget('SpellProgressRect', icon)
             progressRect:setId(iconId)
-            progressRect:fill('parent')
+            progressRect:setHeight(2)
+            progressRect:addAnchor(AnchorLeft, 'parent', AnchorLeft)
+            progressRect:addAnchor(AnchorRight, 'parent', AnchorRight)
+            progressRect:addAnchor(AnchorBottom, 'parent', AnchorBottom)
             isNewProgressRect = true
         end
         progressRect.icon = icon
